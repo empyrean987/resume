@@ -36,6 +36,7 @@ jobs:
           "${{ steps.setup-chrome.outputs.chrome-path }}" \
             --headless --disable-gpu --no-sandbox \
             --print-to-pdf="$PWD/resume.pdf" \
+            --no-pdf-header-footer \
             --virtual-time-budget=5000 \
             "file://$PWD/index.html"
 
