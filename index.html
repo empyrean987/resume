@@ -345,6 +345,8 @@
         <li>Engineered a tiered caching layer (NGINX + Lua, local and Redis caches) to absorb ad-insertion capacity demands and reduce origin load, cutting MTTR from hours to seconds while improving playback start times at global streaming scale.</li>
         <li>Led the migration of core playback infrastructure to Kubernetes (EKS), improving deployment velocity and operational resilience across the platform.</li>
         <li>Introduced automated canary analysis and load testing into the deployment pipeline, catching regressions before production and de-risking releases for every team shipping playback changes.</li>
+        <li>Led Load Test Automation, a reliability-org framework giving application teams org-wide a self-service way to load test their services and derive concrete scaling numbers.</li>
+        <li>Built Service Health Dashboard and Alerting, standardizing common HTTP metrics and latency monitoring across all Tier 1 &amp; 2 services and using historical data analysis to set meaningful thresholds that sped up first-responder triage.</li>
         <li>Partnered with multiple engineering teams to define and roll out SLOs via Terraform, giving teams a shared, measurable reliability standard.</li>
         <li>Redesigned autoscaling policies to lower the minimum scale required across all playback services, cutting baseline infrastructure footprint without sacrificing resilience.</li>
         <li>Architected a blue/green deployment strategy with automated rollback to protect media rights compliance, enabling zero-downtime releases with instant recovery.</li>
