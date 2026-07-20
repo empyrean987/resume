@@ -342,14 +342,16 @@
         <div class="job-dates">Sept 2021 – Present</div>
       </div>
       <ul class="job-bullets">
-        <li>Engineered a tiered caching layer (NGINX + Lua, local and Redis caches) to absorb ad-insertion capacity demands and reduce origin load, cutting MTTR from hours to seconds while improving playback start times at global streaming scale.</li>
-        <li>Led the migration of core playback infrastructure to Kubernetes (EKS), improving deployment velocity and operational resilience across the platform.</li>
+        <li>Engineered a tiered caching layer (NGINX + Lua, local and Redis caches) as the fix identified in a blameless postmortem following a cache-recovery incident — absorbing ad-insertion capacity demands, reducing origin load (S3), and cutting MTTR from hours to seconds while improving playback start times at global streaming scale.</li>
+        <li>Led the migration of core playback infrastructure to a standardized build and deployment framework — Kubernetes (EKS), Spinnaker pipelines, a GitHub Actions build framework for playback and media security builds, standardized build/runtime images, load/functional test frameworks, and semantic versioning — improving deployment velocity and operational resilience platform-wide.</li>
         <li>Introduced automated canary analysis and load testing into the deployment pipeline, catching regressions before production and de-risking releases for every team shipping playback changes.</li>
-        <li>Led Load Test Automation, a reliability-org framework giving application teams org-wide a self-service way to load test their services and derive concrete scaling numbers.</li>
-        <li>Built Service Health Dashboard and Alerting, standardizing common HTTP metrics and latency monitoring across all Tier 1 &amp; 2 services and using historical data analysis to set meaningful thresholds that sped up first-responder triage.</li>
-        <li>Partnered with multiple engineering teams to define and roll out SLOs via Terraform, giving teams a shared, measurable reliability standard.</li>
+        <li>Led Load Test Automation, a reliability-org framework giving application teams org-wide a self-service way to load test their services and derive concrete scaling numbers; as a key member of the Platform Load Test Team, run weekly platform-level load tests with primary ownership of scale readiness for Super Bowl LXI's exclusive broadcast on Disney+.</li>
+        <li>Built Service Health Dashboard and Alerting — standardizing HTTP metrics and latency monitoring across all Tier 1 &amp; 2 services with historical-data-informed thresholds that sped up first-responder triage — then built Alert Fidelity, a GitHub Action that validates those alerts against real incidents to continuously tune accuracy, laying the groundwork for a planned shift to ML-based anomaly detection.</li>
+        <li>Partnered with playback engineering teams to define and roll out SLOs via Terraform, then authored an RFC establishing Error Budget Agreements with Tier 1 &amp; 2 teams — defining each team's SLIs and the actions required as budget is consumed, with burn-rate alerts flagging threshold breaches to trigger investigation and drive reliability improvements.</li>
+        <li>Mentor 6 engineers through biweekly checkpoints — surfacing PRD process innovation opportunities, coaching career progression, and advocating for their work in mid-year and year-end reviews — with one mentee promoted to Senior Engineer as a direct result.</li>
         <li>Redesigned autoscaling policies to lower the minimum scale required across all playback services, cutting baseline infrastructure footprint without sacrificing resilience.</li>
         <li>Architected a blue/green deployment strategy with automated rollback to protect media rights compliance, enabling zero-downtime releases with instant recovery.</li>
+        <li>Leading a War Games initiative that injects controlled scaling incidents during platform load tests within the region-evacuation window, engaging Tier 1 &amp; 2 service teams in live incident response to measure MTTR without production impact — running each exercise through a blameless postmortem to surface gaps in runbooks, paging fan-out, and incident routing accuracy.</li>
       </ul>
     </div>
 
@@ -380,7 +382,7 @@
         <div class="job-dates">Sept 2015 – June 2020</div>
       </div>
       <ul class="job-bullets">
-        <li>Built and deployed the recommendations and metadata infrastructure powering personalization across the Samsung Smart TV platform.</li>
+        <li>Built and deployed the recommendations and metadata infrastructure powering personalization across the Samsung Smart TV platform, then led its migration to all-new VPC networking and EKS clusters via Terraform.</li>
         <li>Introduced SLOs backed by anomaly detection for the automatic content recognition (ACR) pipeline, turning it from a black box into a monitored, measurable system.</li>
         <li>Led the migration of Jenkins controller/agent infrastructure from EC2 to EKS, modernizing the CI backbone for the metadata and recommendations teams.</li>
       </ul>
