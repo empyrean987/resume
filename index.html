@@ -72,6 +72,12 @@
   }
   .contact a{color:var(--sub);text-decoration:none;}
   .contact a:hover{color:var(--accent);text-decoration:underline;}
+  .summary-text{
+    font-size:1rem;
+    line-height:1.6;
+    color:var(--ink);
+    margin:0;
+  }
   section{margin-bottom:36px;}
   h2{
     font-size:0.78rem;
@@ -253,6 +259,10 @@
     </div>
   </header>
 
+  <section id="summary">
+    <p class="summary-text">Lead Site Reliability Engineer with two decades of systems, platform, and reliability engineering experience, driving observability, deployment, and reliability strategy across Disney's global streaming platform. Partners with engineering leadership to align reliability investment with business risk — negotiating org-wide Error Budget Agreements across independent teams and owning scale readiness for the platform's highest-stakes live broadcast events — while mentoring engineers and advocating for their growth.</p>
+  </section>
+
   <section id="skills">
     <h2>Languages &amp; Proficiencies</h2>
 
@@ -272,7 +282,7 @@
         <span class="chip chip-familiar">C++</span><span class="chip chip-familiar">C#</span>
         <span class="chip chip-familiar">Expect</span><span class="chip chip-familiar">Java</span>
         <span class="chip chip-familiar">Node.js</span><span class="chip chip-familiar">Scala</span>
-        <span class="chip chip-familiar">Groovy</span>
+        <span class="chip chip-familiar">Groovy</span><span class="chip chip-familiar">Rust</span>
       </div>
     </div>
 
@@ -291,8 +301,7 @@
         <span class="kicker">Operating Systems</span>
         <div class="chips">
           <span class="chip">RHEL</span><span class="chip">Amazon Linux</span><span class="chip">Ubuntu</span>
-          <span class="chip">CoreOS</span><span class="chip">Debian</span><span class="chip">SunOS</span>
-          <span class="chip">Windows Server 2003/2008</span>
+          <span class="chip">CoreOS</span><span class="chip">Debian</span>
         </div>
       </div>
 
@@ -306,15 +315,6 @@
           <span class="chip">EMR</span><span class="chip">S3</span><span class="chip">Redshift</span>
           <span class="chip">ECR</span><span class="chip">Lambda</span><span class="chip">ASG</span>
           <span class="chip">IAM</span><span class="chip">EC2</span><span class="chip">CloudFront</span>
-        </div>
-      </div>
-
-      <div class="skill-block" style="grid-column:1/-1;">
-        <span class="kicker">Network</span>
-        <div class="chips">
-          <span class="chip">F5</span><span class="chip">Cisco</span><span class="chip">Juniper</span>
-          <span class="chip">Routers</span><span class="chip">Switches</span><span class="chip">Firewalls</span>
-          <span class="chip">Load Balancers</span>
         </div>
       </div>
 
@@ -342,15 +342,15 @@
         <div class="job-dates">Sept 2021 – Present</div>
       </div>
       <ul class="job-bullets">
+        <li>Owned scale readiness for Super Bowl LXI's exclusive Disney+ broadcast — the platform's highest-stakes streaming event — driving weekly cross-team load testing and capacity validation as a key member of the Platform Load Test Team to de-risk a live, revenue- and reputation-critical event with zero tolerance for failure.</li>
+        <li>Designed and drove org-wide adoption of an Error Budget Agreement framework — negotiating SLIs and required actions directly with Tier 1 &amp; 2 team leads to align each team's reliability investment with business risk tolerance — formalized via an authored RFC that now governs platform-wide release discipline, with Terraform-managed SLOs and burn-rate alerting driving investigation when budgets are breached.</li>
         <li>Engineered a tiered caching layer (NGINX + Lua, local and Redis caches) as the fix identified in a blameless postmortem following a cache-recovery incident — absorbing ad-insertion capacity demands, reducing origin load (S3), and cutting MTTR from hours to seconds while improving playback start times at global streaming scale.</li>
         <li>Led the migration of core playback infrastructure to a standardized build and deployment framework — Kubernetes (EKS), Spinnaker pipelines, a GitHub Actions build framework for playback and media security builds, standardized build/runtime images, load/functional test frameworks, and semantic versioning — improving deployment velocity and operational resilience platform-wide.</li>
         <li>Introduced automated canary analysis and load testing into the deployment pipeline, catching regressions before production and de-risking releases for every team shipping playback changes.</li>
-        <li>Led Load Test Automation, a reliability-org framework giving application teams org-wide a self-service way to load test their services and derive concrete scaling numbers; as a key member of the Platform Load Test Team, run weekly platform-level load tests with primary ownership of scale readiness for Super Bowl LXI's exclusive broadcast on Disney+.</li>
+        <li>Led Load Test Automation, a reliability-org framework giving application teams org-wide a self-service way to load test their services and derive concrete scaling numbers, raising platform-wide confidence in capacity planning ahead of major traffic events.</li>
         <li>Built Service Health Dashboard and Alerting — standardizing HTTP metrics and latency monitoring across all Tier 1 &amp; 2 services with historical-data-informed thresholds that sped up first-responder triage — then built Alert Fidelity, a GitHub Action that validates those alerts against real incidents to continuously tune accuracy, laying the groundwork for a planned shift to ML-based anomaly detection.</li>
-        <li>Partnered with playback engineering teams to define and roll out SLOs via Terraform, then authored an RFC establishing Error Budget Agreements with Tier 1 &amp; 2 teams — defining each team's SLIs and the actions required as budget is consumed, with burn-rate alerts flagging threshold breaches to trigger investigation and drive reliability improvements.</li>
         <li>Mentor 6 engineers through biweekly checkpoints — surfacing PRD process innovation opportunities, coaching career progression, and advocating for their work in mid-year and year-end reviews — with one mentee promoted to Senior Engineer as a direct result.</li>
-        <li>Redesigned autoscaling policies to lower the minimum scale required across all playback services, cutting baseline infrastructure footprint without sacrificing resilience.</li>
-        <li>Architected a blue/green deployment strategy with automated rollback to protect Media Right Services, enabling zero-downtime releases with instant recovery.</li>
+        <li>Architected a blue/green deployment strategy with automated rollback for Media Rights Services, protecting against compliance and contractual exposure by enabling zero-downtime releases with instant recovery — removing deployment risk from a system enforcing time-sensitive content rights.</li>
         <li>Leading a War Games initiative that injects controlled scaling incidents during platform load tests within the region-evacuation window, engaging Tier 1 &amp; 2 service teams in live incident response to measure MTTR without production impact — running each exercise through a blameless postmortem to surface gaps in runbooks, paging fan-out, and incident routing accuracy.</li>
       </ul>
     </div>
